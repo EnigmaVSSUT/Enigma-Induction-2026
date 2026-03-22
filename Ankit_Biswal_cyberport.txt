@@ -1,0 +1,37 @@
++Enigma Induction 2026 - CyberSecurity Task Submission:
++
++---CyberSecurity Portfolio---
++
++
++Name:Ankit Biswal
++Branch:Electronic Telecommunication Engineering
++Reg No:2502070020
++
++
++phase 1 completion:
++I have successfully installed and updated Kali Linux on my system.
++
++
++phase 2 completion:
++I have created created and maintained a cybersecurity portfolio file using gedit to document a 11 steps,commands,observations.
++
+phase 3 completion:
++I have successfully installed gobuster.
++
++Tool Instllation:
++sudo apt install gobuster
++
++
++Tool Usage:
++gobuster dir -u https://httpbin.org -w /usr/share/wordlists/dirb/common.txt -k
++
++Sample Output:
++cache (status:200)
++images (status:301)
++
++
++Conclusion:
++Suceesfully performed the tasks 
+
+
+
