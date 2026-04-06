@@ -1,0 +1,74 @@
+:root {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --accent: #38bdf8;
+    --text: #f8fafc;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+header {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(to bottom, #1e293b, #0f172a);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo span { color: var(--accent); }
+
+.roadmap {
+    position: relative;
+    border-left: 2px solid var(--accent);
+    margin-left: 20px;
+    padding-left: 30px;
+}
+
+.step {
+    background: var(--card-bg);
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    transition: transform 0.3s ease;
+    cursor: default;
+}
+
+.step:hover {
+    transform: translateX(10px);
+    box-shadow: 0 4px 20px rgba(56, 189, 248, 0.2);
+}
+
+/* The dot on the line */
+.step::before {
+    content: "";
+    position: absolute;
+    left: -41px;
+    top: 25px;
+    width: 20px;
+    height: 20px;
+    background: var(--accent);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--accent);
+}
+
+h3 {
+    margin-top: 0;
+    color: var(--accent);
+}

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enigma Events</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+}
+
+header{
+    padding:20px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+}
+
+.logo{
+    font-size:24px;
+    font-weight:700;
+}
+
+.nav a{
+    margin-left:20px;
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+.nav a:hover{
+    color:#38bdf8;
+}
+
+.hero{
+    height:50vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:48px;
+    animation:fadeDown 1s ease;
+}
+
+.hero p{
+    opacity:0.7;
+    margin-top:10px;
+    animation:fadeUp 1.2s ease;
+}
+
+@keyframes fadeDown{
+    from{transform:translateY(-40px); opacity:0}
+    to{transform:translateY(0); opacity:1}
+}
+
+@keyframes fadeUp{
+    from{transform:translateY(40px); opacity:0}
+    to{transform:translateY(0); opacity:1}
+}
+
+.events{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    padding:50px;
+}
+
+.card{
+    background:rgba(255,255,255,0.05);
+    padding:20px;
+    border-radius:20px;
+    transition:0.4s;
+    transform:translateY(40px);
+    opacity:0;
+}
+
+.card.show{
+    transform:translateY(0);
+    opacity:1;
+}
+
+.card:hover{
+    transform:translateY(-10px) scale(1.03);
+    box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+.card p{
+    opacity:0.7;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:8px 16px;
+    background:#38bdf8;
+    border-radius:8px;
+    text-decoration:none;
+    color:black;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:white;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">ENIGMA</div>
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="blogs.html">Blogs</a>
+        <a href="projects.html">Projects</a>
+        <a href="team.html">Team</a>
+    </div>
+</header>
+
+<section class="hero">
+    <h1>Our Events</h1>
+    <p>Hackathons, Workshops & Competitions</p>
+</section>
+
+<section class="events">
+
+    <div class="card">
+        <h3>Hackathon 2026</h3>
+        <p>24-hour coding battle to build innovative solutions.</p>
+        <a href="#" class="btn">Explore</a>
+    </div>
+
+    <div class="card">
+        <h3>Web Dev Workshop</h3>
+        <p>Learn modern web development from scratch.</p>
+        <a href="#" class="btn">Explore</a>
+    </div>
+
+    <div class="card">
+        <h3>AI Bootcamp</h3>
+        <p>Hands-on training on AI & ML projects.</p>
+        <a href="#" class="btn">Explore</a>
+    </div>
+
+    <div class="card">
+        <h3>Code Clash</h3>
+        <p>Competitive programming contest for all levels.</p>
+        <a href="#" class="btn">Explore</a>
+    </div>
+
+</section>
+
+<script>
+const cards = document.querySelectorAll('.card');
+
+window.addEventListener('scroll', () => {
+    const trigger = window.innerHeight * 0.85;
+
+    cards.forEach(card => {
+        const top = card.getBoundingClientRect().top;
+
+        if(top < trigger){
+            card.classList.add('show');
+        }
+    });
+});
+</script>
+
+</body>
+</html>

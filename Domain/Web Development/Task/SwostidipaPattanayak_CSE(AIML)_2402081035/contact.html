@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enigma - Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            &lt;ENIGMA&gt;
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+        <h1>Contact <span class="green-text">Us</span></h1>
+        <p>We would love to hear from you</p>
+        <div class="title-underline"></div>
+    </div>
+
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section">
+
+        <!-- LEFT SIDE: Contact form -->
+        <div class="contact-form-box">
+            <h2>Send Us a Message</h2>
+
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="e.g. Rahul Sharma">
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="rahul@example.com">
+
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" placeholder="What is this about?">
+
+            <label for="message">Your Message</label>
+            <textarea id="message" placeholder="Write your message here..."></textarea>
+
+            <button onclick="sendMessage()">Send Message</button>
+
+            <p id="success-msg" class="success-msg">
+                ✓ Message sent! We will get back to you soon.
+            </p>
+        </div>
+
+
+        <!-- RIGHT SIDE: Club details-->
+        <div class="contact-info-box">
+            <h2>Our Details</h2>
+
+            <p>📍 <strong>Location</strong> — VSSUT Burla, Sambalpur, Odisha</p>
+            <p>📧 <strong>Email</strong> — enigma@vssut.ac.in</p>
+            <p>🌐 <strong>Website</strong> — enigmavssut.in</p>
+            <p>💻 <strong>GitHub</strong> — github.com/EnigmaVSSUT</p>
+
+            <div class="social-links">
+                <a href="https://enigmavssut.in" target="_blank" class="social-btn">🌐 Website</a>
+                <a href="#" class="social-btn">📸 Instagram</a>
+                <a href="#" class="social-btn">💼 LinkedIn</a>
+                <a href="#" class="social-btn">🐙 GitHub</a>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&lt;ENIGMA&gt; - Coding Club, VSSUT Burla</p>
+        <p>© 2026 All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

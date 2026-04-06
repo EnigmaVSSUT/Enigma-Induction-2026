@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enigma Projects</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+    font-family:'Poppins',sans-serif;
+    background: radial-gradient(circle at 80% 20%, #1e293b, #020617);
+    color:white;
+}
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    padding:18px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+}
+
+.logo{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:26px;
+    letter-spacing:2px;
+    font-weight:700;
+}
+
+.nav a{
+    margin-left:25px;
+    text-decoration:none;
+    color:white;
+    position:relative;
+    font-size:15px;
+}
+
+.nav a::after{
+    content:"";
+    position:absolute;
+    width:0%;
+    height:2px;
+    left:0;
+    bottom:-5px;
+    background:#38bdf8;
+    transition:0.3s;
+}
+
+.nav a:hover::after{width:100%}
+
+.hero{
+    height:45vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+}
+
+.hero h1{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:52px;
+    background:linear-gradient(90deg,#22c55e,#38bdf8);
+    -webkit-background-clip:text;
+    color:transparent;
+    animation:fadeDown 1s ease;
+}
+
+.hero p{
+    margin-top:10px;
+    opacity:0.7;
+    animation:fadeUp 1.2s ease;
+}
+
+@keyframes fadeDown{
+    from{transform:translateY(-40px);opacity:0}
+    to{transform:translateY(0);opacity:1}
+}
+
+@keyframes fadeUp{
+    from{transform:translateY(40px);opacity:0}
+    to{transform:translateY(0);opacity:1}
+}
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:35px;
+    padding:60px;
+}
+
+.card{
+    background:rgba(255,255,255,0.04);
+    border-radius:20px;
+    overflow:hidden;
+    transition:0.5s cubic-bezier(.2,.8,.2,1);
+    transform:translateY(60px);
+    opacity:0;
+    position:relative;
+}
+
+.card.show{
+    transform:translateY(0);
+    opacity:1;
+}
+
+.card:hover{
+    transform:translateY(-12px) scale(1.04);
+    box-shadow:0 20px 50px rgba(0,0,0,0.7);
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    filter:brightness(0.75);
+    transition:0.4s;
+}
+
+.card:hover img{
+    filter:brightness(1);
+    transform:scale(1.05);
+}
+
+.card-content{
+    padding:22px;
+}
+
+.card-content h3{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:18px;
+}
+
+.card-content p{
+    margin-top:8px;
+    font-size:13px;
+    opacity:0.7;
+}
+
+.tech{
+    margin-top:10px;
+}
+
+.tech span{
+    font-size:11px;
+    background:rgba(255,255,255,0.1);
+    padding:4px 8px;
+    margin-right:6px;
+    border-radius:6px;
+}
+
+.view-btn{
+    display:inline-block;
+    margin-top:12px;
+    padding:7px 16px;
+    background:linear-gradient(90deg,#22c55e,#38bdf8);
+    border-radius:8px;
+    text-decoration:none;
+    color:white;
+    font-size:13px;
+    transition:0.3s;
+}
+
+.view-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 25px rgba(34,197,94,0.4);
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">ENIGMA</div>
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="blogs.html">Blogs</a>
+        <a href="team.html">Team</a>
+    </div>
+</header>
+
+<section class="hero">
+    <h1>Our Projects</h1>
+    <p>Innovations built by Enigma members</p>
+</section>
+
+<section class="projects">
+
+<div class="card">
+    <img src="https://picsum.photos/400/200?5">
+    <div class="card-content">
+        <h3>Smart Attendance System</h3>
+        <p>Face recognition based attendance system using AI.</p>
+        <div class="tech"><span>AI</span><span>Python</span></div>
+        <a href="#" class="view-btn">View Project</a>
+    </div>
+</div>
+
+<div class="card">
+    <img src="https://picsum.photos/400/200?6">
+    <div class="card-content">
+        <h3>Campus Navigator</h3>
+        <p>Interactive map system for navigating campus easily.</p>
+        <div class="tech"><span>Web</span><span>JS</span></div>
+        <a href="#" class="view-btn">View Project</a>
+    </div>
+</div>
+
+<div class="card">
+    <img src="https://picsum.photos/400/200?7">
+    <div class="card-content">
+        <h3>Cyber Threat Analyzer</h3>
+        <p>Detects vulnerabilities and potential cyber threats.</p>
+        <div class="tech"><span>Security</span><span>ML</span></div>
+        <a href="#" class="view-btn">View Project</a>
+    </div>
+</div>
+
+<div class="card">
+    <img src="https://picsum.photos/400/200?8">
+    <div class="card-content">
+        <h3>Code Practice Platform</h3>
+        <p>Platform for competitive coding and problem solving.</p>
+        <div class="tech"><span>DSA</span><span>Web</span></div>
+        <a href="#" class="view-btn">View Project</a>
+    </div>
+</div>
+
+</section>
+
+<script>
+const cards = document.querySelectorAll('.card');
+
+window.addEventListener('scroll', () => {
+    const trigger = window.innerHeight * 0.85;
+    cards.forEach((card,i) => {
+        const top = card.getBoundingClientRect().top;
+        if(top < trigger){
+            setTimeout(()=>card.classList.add('show'), i*120);
+        }
+    });
+});
+</script>
+
+</body>
+</html>

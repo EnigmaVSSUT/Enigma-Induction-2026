@@ -1,0 +1,5 @@
+Sample Input: 
+The Apollo program, also known as Project Apollo, was the third United States human spaceflight  program carried out by the National Aeronautics and Space Administration (NASA), which succeeded  in preparing and landing the first humans on the Moon from 1968 to 1972. It was first conceived  in 1960 during Dwight D. Eisenhower's administration as a three-person spacecraft to follow  the one-person Project Mercury, which put the first Americans in space. Apollo was later  dedicated to President John F. Kennedy's national goal of "landing a man on the Moon and  returning him safely to the Earth" by the end of the 1960s.
+
+Sample Output:
+The Apollo program, also known as Project Apollo, was the third U.S. human spaceflight program carried out by the National Aeronautics and Space Administration. It succeeded in preparing and landing the first humans on the Moon from 1968 to 1972. It was first conceived  in 1960 during Dwight D. Eisenhower's administration as a three-person spacecraft to follow Project Mercury.

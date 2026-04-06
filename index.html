@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BUILD WITH ENIGMA</title>
+
+<style>
+.hero-enigmalogo {
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+.navbar {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.navbar a {
+  text-decoration: none;
+  margin-left: 10px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  background: linear-gradient(45deg,#00f0ff,#00ff88);
+  color: #000;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  transform: scale(1.1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+  color: #13e36d;
+  scroll-behavior: smooth;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hero-title span {
+  display: block;
+  color: #00ff51;
+}
+
+.hero-title strong {
+  background: linear-gradient(45deg,#00f0ff,#ff00d4,#00ff88);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-title {
+  font-size: 5rem;
+}
+
+.section {
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card {
+  padding: 1.5rem;
+  border-radius: 20px;
+  width: 260px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.team-card { background: linear-gradient(135deg,#00c6ff,#0072ff); }
+.project-card { background: linear-gradient(135deg,#cdf723,#3333ff); }
+.blog-card { background: linear-gradient(135deg,#00ff88,#009966); }
+
+.future-card {
+  background: linear-gradient(135deg,#ff00cc,#3333ff);
+  width: 280px;
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* NEW PROJECT TEXT */
+.project-text {
+  display: none;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+.future-text {
+  display: none;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+#contact form {
+  max-width: 700px;
+  margin: auto;
+}
+
+.blog-text {
+  display: none;
+  font-size: 0.8rem;
+  margin-top: 10px;
+}
+
+.about {
+  margin-top: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+  <a href="#team">Team</a>
+  <a href="#projects">Projects</a>
+  <a href="#blog">Blog</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<img src="images/enigmalogo.jpeg" class="hero-enigmalogo" alt="EnigmaLogo">
+
+<section class="hero">
+<h1 class="hero-title">
+<span>Try With Trust</span>
+<strong>CODING CLUB ENIGMA</strong>
+</h1>
+</section>
+
+<section id="team" class="section">
+<h2>Team</h2>
+<div class="cards">
+
+<div class="card team-card">
+<img src="https://i.pravatar.cc/200?img=1">
+<h3>Akash</h3>
+<p>Frontend Developer</p>
+<p>Expert in UI & animations</p>
+</div>
+
+<div class="card team-card">
+<h3>Baibhab</h3>
+<p>Backend Developer</p>
+<p>API & database specialist</p>
+</div>
+
+<div class="card team-card">
+<h3>Chandan</h3>
+<p>Designer</p>
+<p>Creative UI designer</p>
+<p>new joinig</p>
+</div>
+
+<div class="card team-card">
+<img src="https://i.pravatar.cc/200?img=4">
+<h3>David</h3>
+<p>Full Stack Dev</p>
+<p>Handles frontend + backend</p>
+</div>
+
+<div class="card team-card">
+<img src="https://i.pravatar.cc/200?img=5">
+<h3>Elina</h3>
+<p>Manager</p>
+<p>Coordinates team</p>
+</div>
+
+<div class="card team-card">
+<h3>New Member</h3>
+<p>AI Developer</p>
+<p>Works on ML models</p>
+</div>
+
+</div>
+</section>
+
+<section id="projects" class="section">
+<h2>Projects</h2>
+<div class="cards">
+
+<div class="card project-card">
+<img src="https://images.unsplash.com/photo-1677442136019-21780ecad995">
+<h3>AI Chatbot</h3>
+<p>Smart chatbot using AI</p>
+<a href="#" onclick="toggleProject(event,this)">View Project</a>
+<div class="project-text">
+This chatbot uses AI and NLP to interact with users and provide intelligent responses in real-time.
+</div>
+</div>
+
+<div class="card project-card">
+<img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c">
+<h3>Portfolio</h3>
+<p>Personal portfolio site</p>
+<a href="#" onclick="toggleProject(event,this)">View Project</a>
+<div class="project-text">
+A responsive portfolio website to showcase projects, skills, and achievements professionally.
+</div>
+</div>
+
+<div class="card project-card">
+<img src="https://5.imimg.com/data5/SELLER/Default/2026/2/582031480/PT/BB/JN/75749341/e-commerce-online-shopping-system.png">
+<h3>E-commerce</h3>
+<p>Online shopping system</p>
+<a href="#" onclick="toggleProject(event,this)">View Project</a>
+<div class="project-text">
+An online shopping system with product listings, cart management, and secure checkout features.
+</div>
+</div>
+
+<div class="card project-card">
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20240427182308/How-to-Manage-Tasks.webp">
+<h3>Task Manager</h3>
+<p>Task tracking system</p>
+<a href="#" onclick="toggleProject(event,this)">View Project</a>
+<div class="project-text">
+Helps users organize tasks, track progress, and manage time efficiently with a simple interface.
+</div>
+</div>
+
+<div class="card project-card">
+<img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a">
+<h3>AI Vision</h3>
+<p>Image recognition AI</p>
+<a href="#" onclick="toggleProject(event,this)">View Project</a>
+<div class="project-text">
+Uses computer vision to identify and classify objects in images for automation and smart applications.
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="blog" class="section">
+<h2>Tech Blogs</h2>
+<div class="cards">
+
+<div class="card blog-card" onclick="toggleBlog(this)">
+<h3>Future of AI</h3>
+<div class="blog-text">AI is transforming industries by automating tasks and improving decision-making.
+It is widely used in healthcare, finance, and education.
+In the future, AI will power smart cities, autonomous vehicles, and advanced robotics,
+making life more efficient and connected. </div>
+</div>
+
+<div class="card blog-card" onclick="toggleBlog(this)">
+<h3>Web Development Trends</h3>
+<div class="blog-text">Modern web development focuses on speed, responsiveness, and user experience.
+Technologies like React, Next.js, and Tailwind CSS are widely used.
+Progressive Web Apps (PWA) and mobile-first design are becoming essential,
+ensuring websites work smoothly across all devices.</div>
+</div>
+
+<div class="card blog-card" onclick="toggleBlog(this)">
+<h3>Cyber Security Basics</h3>
+<div class="blog-text">Cyber security protects systems, networks, and data from digital attacks.
+It includes practices like strong passwords, encryption, and secure coding.
+With increasing online threats, learning cyber security is important
+to keep information safe and prevent data breaches.</div>
+</div>
+
+<div class="card blog-card" onclick="toggleBlog(this)">
+<h3>Cloud Computing</h3>
+<div class="blog-text">Cloud computing allows storing and accessing data over the internet instead of local devices.
+It provides scalability, flexibility, and cost efficiency for businesses.
+Platforms like AWS, Azure, and Google Cloud are widely used
+to build, deploy, and manage modern applications.</div>
+</div>
+
+</div>
+</section>
+
+<section class="section">
+<h2>What’s Next</h2>
+<div class="cards">
+
+<div class="card future-card" onclick="toggleFuture(this)">
+<img src="https://images.unsplash.com/photo-1677442136019-21780ecad995">
+<h3>AI Products & Hackathons</h3>
+<div class="future-text">We plan to build AI products and host hackathons.</div>
+</div>
+
+<div class="card future-card" onclick="toggleFuture(this)">
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+<h3>Open Source Tools</h3>
+<div class="future-text">We will create open-source tools for developers.</div>
+</div>
+
+<div class="card future-card" onclick="toggleFuture(this)">
+<img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c">
+<h3>Global Collaboration</h3>
+<div class="future-text">We aim to collaborate globally with tech communities.</div>
+</div>
+
+</div>
+</section>
+
+<section id="contact" class="section">
+<h2>Contact</h2>
+
+<form>
+<input type="text" placeholder="Name" required><br><br>
+<input type="email" placeholder="Email" required><br><br>
+<textarea placeholder="Message" required></textarea><br><br>
+<button>Send</button>
+</form>
+
+<div class="about">
+<h3>About Us</h3>
+<p>
+Coding Club Enigma is a tech community focused on innovation,
+projects, and learning.
+</p>
+</div>
+
+</section>
+
+<script>
+function toggleBlog(card){
+  const text = card.querySelector(".blog-text");
+  text.style.display = text.style.display === "block" ? "none" : "block";
+}
+
+function toggleFuture(card){
+  const text = card.querySelector(".future-text");
+  text.style.display = text.style.display === "block" ? "none" : "block";
+}
+
+function toggleProject(event, link){
+  event.preventDefault();
+  const card = link.parentElement;
+  const text = card.querySelector(".project-text");
+  text.style.display = text.style.display === "block" ? "none" : "block";
+}
+</script>
+
+</body>
+</html>

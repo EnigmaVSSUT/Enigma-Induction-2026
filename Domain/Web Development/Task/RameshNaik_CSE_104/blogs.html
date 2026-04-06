@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enigma Blogs</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+    font-family:'Poppins',sans-serif;
+    background: radial-gradient(circle at 20% 20%, #1e293b, #020617);
+    color:white;
+    overflow-x:hidden;
+}
+
+/* NAVBAR */
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    padding:18px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+}
+
+.logo{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:26px;
+    letter-spacing:2px;
+    font-weight:700;
+}
+
+.nav a{
+    margin-left:25px;
+    text-decoration:none;
+    color:white;
+    position:relative;
+    font-size:15px;
+}
+
+.nav a::after{
+    content:"";
+    position:absolute;
+    width:0%;
+    height:2px;
+    left:0;
+    bottom:-5px;
+    background:#38bdf8;
+    transition:0.3s;
+}
+
+.nav a:hover::after{width:100%}
+
+/* HERO */
+.hero{
+    height:45vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+}
+
+.hero h1{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:52px;
+    background:linear-gradient(90deg,#38bdf8,#a78bfa);
+    -webkit-background-clip:text;
+    color:transparent;
+    animation:fadeDown 1s ease;
+}
+
+.hero p{
+    margin-top:10px;
+    opacity:0.7;
+    animation:fadeUp 1.2s ease;
+}
+
+@keyframes fadeDown{
+    from{transform:translateY(-40px);opacity:0}
+    to{transform:translateY(0);opacity:1}
+}
+
+@keyframes fadeUp{
+    from{transform:translateY(40px);opacity:0}
+    to{transform:translateY(0);opacity:1}
+}
+
+/* BLOG GRID */
+.blogs{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:35px;
+    padding:60px;
+}
+
+/* CARD */
+.card{
+    background:rgba(255,255,255,0.04);
+    border-radius:20px;
+    overflow:hidden;
+    transition:0.5s cubic-bezier(.2,.8,.2,1);
+    transform:translateY(60px);
+    opacity:0;
+}
+
+.card.show{
+    transform:translateY(0);
+    opacity:1;
+}
+
+.card:hover{
+    transform:translateY(-12px) scale(1.04);
+    box-shadow:0 20px 50px rgba(0,0,0,0.7);
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    filter:brightness(0.8);
+    transition:0.4s;
+}
+
+.card:hover img{
+    filter:brightness(1);
+    transform:scale(1.05);
+}
+
+.card-content{
+    padding:22px;
+}
+
+.card-content h3{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:18px;
+    margin-bottom:8px;
+}
+
+.card-content span{
+    font-size:12px;
+    opacity:0.5;
+}
+
+.card-content p{
+    margin-top:8px;
+    font-size:13px;
+    opacity:0.7;
+}
+
+.read-btn{
+    display:inline-block;
+    margin-top:12px;
+    padding:7px 16px;
+    background:linear-gradient(90deg,#38bdf8,#6366f1);
+    border-radius:8px;
+    text-decoration:none;
+    color:white;
+    font-size:13px;
+    transition:0.3s;
+}
+
+.read-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 25px rgba(56,189,248,0.4);
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">ENIGMA</div>
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="projects.html">Projects</a>
+        <a href="team.html">Team</a>
+    </div>
+</header>
+
+<section class="hero">
+    <h1>Blogs & Insights</h1>
+    <p>Ideas, tech, and innovation from Enigma</p>
+</section>
+
+<section class="blogs">
+
+<div class="card"><img src="https://picsum.photos/400/200?1"><div class="card-content"><h3>AI vs Future Systems</h3><span>15 Mar 2023</span><p>Understanding how modern AI is reshaping industries.</p><a href="#" class="read-btn">Read More</a></div></div>
+
+<div class="card"><img src="https://picsum.photos/400/200?2"><div class="card-content"><h3>Quantum Security</h3><span>7 Mar 2023</span><p>The next revolution in cybersecurity and encryption.</p><a href="#" class="read-btn">Read More</a></div></div>
+
+<div class="card"><img src="https://picsum.photos/400/200?3"><div class="card-content"><h3>Cloud Coding Era</h3><span>21 Feb 2023</span><p>AI-powered IDEs changing development workflows.</p><a href="#" class="read-btn">Read More</a></div></div>
+
+<div class="card"><img src="https://picsum.photos/400/200?4"><div class="card-content"><h3>Modern JS Tools</h3><span>2 Jan 2023</span><p>New runtimes and tools making JS faster than ever.</p><a href="#" class="read-btn">Read More</a></div></div>
+
+</section>
+
+<script>
+const cards = document.querySelectorAll('.card');
+
+window.addEventListener('scroll', () => {
+    const trigger = window.innerHeight * 0.85;
+    cards.forEach((card,i) => {
+        const top = card.getBoundingClientRect().top;
+        if(top < trigger){
+            setTimeout(()=>card.classList.add('show'), i*120);
+        }
+    });
+});
+</script>
+
+</body>
+</html>

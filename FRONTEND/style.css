@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+nav {
+  position: sticky;
+  top: 0;
+  background: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+nav ul {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, purple, black);
+  color: white;
+  font-size: 2rem;
+}
+
+/* Sections */
+section {
+  padding: 40px;
+}
+
+/* Cards */
+.card-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 200px;
+  padding: 15px;
+  border-radius: 10px;
+  background: #f4f4f4;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Form */
+form {
+  max-width: 400px;
+}
+
+input, textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+button {
+  padding: 10px;
+  background: black;
+  color: white;
+  border: none;
+}

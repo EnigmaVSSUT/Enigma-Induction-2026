@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ENIGMA — Coding Club</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- Scanline overlay -->
+  <div class="scanlines"></div>
+
+  <!-- Matrix canvas background -->
+  <canvas id="matrixCanvas"></canvas>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <span class="logo-bracket">[</span>ENIGMA<span class="logo-bracket">]</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#domains" class="nav-link">Domains</a></li>
+      <li><a href="#events" class="nav-link">Events</a></li>
+      <li><a href="#team" class="nav-link">Team</a></li>
+      <li><a href="#join" class="nav-link">Join</a></li>
+    </ul>
+    <button class="join-btn nav-join" onclick="document.getElementById('join').scrollIntoView({behavior:'smooth'})">
+      <span>JOIN_CLUB</span>
+    </button>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <div class="hero-tag">// INITIALIZE SEQUENCE</div>
+      <h1 class="hero-title">
+        <span class="glitch" data-text="ENIGMA">ENIGMA</span>
+      </h1>
+      <p class="hero-sub">CODING CLUB</p>
+      <p class="hero-desc">
+        Where logic meets creativity. We engineer solutions, break boundaries,<br/>
+        and build the future — one line of code at a time.
+      </p>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num" data-target="200">0</span><span>+</span>
+          <span class="stat-label">Members</span>
+        </div>
+        <div class="stat-divider">|</div>
+        <div class="stat">
+          <span class="stat-num" data-target="7">0</span>
+          <span class="stat-label">Domains</span>
+        </div>
+        <div class="stat-divider">|</div>
+        <div class="stat">
+          <span class="stat-num" data-target="50">0</span><span>+</span>
+          <span class="stat-label">Projects</span>
+        </div>
+      </div>
+      <div class="hero-btns">
+        <button class="join-btn" onclick="document.getElementById('domains').scrollIntoView({behavior:'smooth'})">
+          EXPLORE_DOMAINS
+        </button>
+        <button class="outline-btn" onclick="document.getElementById('join').scrollIntoView({behavior:'smooth'})">
+          JOIN_NOW →
+        </button>
+      </div>
+    </div>
+    <div class="hero-terminal">
+      <div class="terminal-header">
+        <span class="t-dot red"></span>
+        <span class="t-dot yellow"></span>
+        <span class="t-dot green"></span>
+        <span class="t-title">enigma_shell</span>
+      </div>
+      <div class="terminal-body" id="terminalBody"></div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section class="about section" id="about">
+    <div class="section-header">
+      <span class="section-tag">// 01</span>
+      <h2 class="section-title">ABOUT US</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>
+          <span class="highlight">ENIGMA</span> is more than a club — it's a launchpad. We are a community of passionate developers, designers, and problem-solvers who believe that great software can change the world.
+        </p>
+        <p>
+          From hackathons to workshops, from open-source contributions to competitive coding — we build, we learn, we grow. Together.
+        </p>
+        <div class="about-features">
+          <div class="feature-item"><span class="feat-icon">▶</span> Weekly coding sessions & workshops</div>
+          <div class="feature-item"><span class="feat-icon">▶</span> Hackathons & competitive programming</div>
+          <div class="feature-item"><span class="feat-icon">▶</span> Mentorship from industry professionals</div>
+          <div class="feature-item"><span class="feat-icon">▶</span> Real-world project collaboration</div>
+        </div>
+      </div>
+      <div class="about-visual">
+        <div class="hex-grid">
+          <div class="hex active"><span>CODE</span></div>
+          <div class="hex"><span>BUILD</span></div>
+          <div class="hex active"><span>LEARN</span></div>
+          <div class="hex"><span>GROW</span></div>
+          <div class="hex active"><span>HACK</span></div>
+          <div class="hex"><span>SHIP</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── DOMAINS ── -->
+  <section class="domains section" id="domains">
+    <div class="section-header">
+      <span class="section-tag">// 02</span>
+      <h2 class="section-title">OUR DOMAINS</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="domains-grid">
+
+      <div class="domain-card" data-domain="web">
+        <div class="card-glow"></div>
+        <div class="card-icon">🌐</div>
+        <div class="card-code">01</div>
+        <h3>Web Development</h3>
+        <p>HTML, CSS, JavaScript, React, Node.js — craft stunning, performant web experiences from frontend to backend.</p>
+        <div class="card-tags">
+          <span>React</span><span>Node.js</span><span>Next.js</span>
+        </div>
+        <div class="card-line"></div>
+      </div>
+
+      <div class="domain-card" data-domain="app">
+        <div class="card-glow"></div>
+        <div class="card-icon">📱</div>
+        <div class="card-code">02</div>
+        <h3>App Development</h3>
+        <p>Build cross-platform mobile apps that users love. From Flutter to React Native — mobile-first thinking.</p>
+        <div class="card-tags">
+          <span>Flutter</span><span>Kotlin</span><span>Swift</span>
+        </div>
+        <div class="card-line"></div>
+      </div>
+
+      <div class="domain-card" data-domain="cpp">
+        <div class="card-glow"></div>
+        <div class="card-icon">⚙️</div>
+        <div class="card-code">03</div>
+        <h3>C++ & DSA</h3>
+        <p>Competitive programming, data structures, algorithms, and systems programming at the lowest level.</p>
+        <div class="card-tags">
+          <span>C++</span><span>DSA</span><span>CP</span>
+        </div>
+        <div class="card-line"></div>
+      </div>
+
+      <div class="domain-card" data-domain="cloud">
+        <div class="card-glow"></div>
+        <div class="card-icon">☁️</div>
+        <div class="card-code">04</div>
+        <h3>Cloud Computing</h3>
+        <p>AWS, Azure, GCP — learn to deploy, scale, and manage applications on the world's largest cloud platforms.</p>
+        <div class="card-tags">
+          <span>AWS</span><span>Docker</span><span>K8s</span>
+        </div>
+        <div class="card-line"></div>
+      </div>
+
+      <div class="domain-card" data-domain="game">
+        <div class="card-glow"></div>
+        <div class="card-icon">🎮</div>
+        <div class="card-code">05</div>
+        <h3>Game Development</h3>
+        <p>Create immersive worlds and engaging gameplay. Unity, Unreal, and beyond — game logic meets art.</p>
+        <div class="card-tags">
+          <span>Unity</span><span>Unreal</span><span>C#</span>
+        </div>
+        <div class="card-line"></div>
+      </div>
+
+      <div class="domain-card" data-domain="ui">
+        <div class="card-glow"></div>
+        <div class="card-icon">🎨</div>
+        <div class="card-code">06</div>
+        <h3>UI / UX Design</h3>
+        <p>Design is problem-solving. Figma, user research, prototyping — beautiful interfaces that actually work.</p>
+        <div class="card-tags">
+          <span>Figma</span><span>Research</span><span>Proto</span>
+        </div>
+        <div class="card-line"></div>
+      </div>
+
+      <div class="domain-card featured" data-domain="cyber">
+        <div class="card-glow"></div>
+        <div class="card-icon">🔐</div>
+        <div class="card-code">07</div>
+        <h3>Cyber Security</h3>
+        <p>Ethical hacking, CTF competitions, network security, cryptography — defend the digital frontier.</p>
+        <div class="card-tags">
+          <span>CTF</span><span>Pentesting</span><span>Crypto</span>
+        </div>
+        <div class="card-line"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── EVENTS ── -->
+  <section class="events section" id="events">
+    <div class="section-header">
+      <span class="section-tag">// 03</span>
+      <h2 class="section-title">EVENTS</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="events-list">
+      <div class="event-item upcoming">
+        <div class="event-badge">UPCOMING</div>
+        <div class="event-date"><span class="e-day">28</span><span class="e-month">MAR</span></div>
+        <div class="event-info">
+          <h3>Hackathon 2026</h3>
+          <p>48-hour coding marathon. Build something extraordinary from scratch.</p>
+          <div class="event-meta"><span>🕐 48 Hours</span><span>👥 Teams of 4</span><span>🏆 Cash Prizes</span></div>
+        </div>
+        <button class="join-btn small">REGISTER</button>
+      </div>
+      <div class="event-item upcoming">
+        <div class="event-badge">UPCOMING</div>
+        <div class="event-date"><span class="e-day">05</span><span class="e-month">APR</span></div>
+        <div class="event-info">
+          <h3>CTF Challenge</h3>
+          <p>Capture-the-flag cybersecurity competition. Hack your way to glory.</p>
+          <div class="event-meta"><span>🕐 6 Hours</span><span>👤 Individual</span><span>🔐 Cyber Track</span></div>
+        </div>
+        <button class="join-btn small">REGISTER</button>
+      </div>
+      <div class="event-item past">
+        <div class="event-badge past-badge">COMPLETED</div>
+        <div class="event-date"><span class="e-day">15</span><span class="e-month">FEB</span></div>
+        <div class="event-info">
+          <h3>Web Dev Bootcamp</h3>
+          <p>3-day intensive workshop covering full-stack development fundamentals.</p>
+          <div class="event-meta"><span>✅ 80+ Attendees</span><span>📅 3 Days</span><span>🌐 Web Track</span></div>
+        </div>
+        <button class="outline-btn small">VIEW RECAP</button>
+      </div>
+      <div class="event-item past">
+        <div class="event-badge past-badge">COMPLETED</div>
+        <div class="event-date"><span class="e-day">10</span><span class="e-month">JAN</span></div>
+        <div class="event-info">
+          <h3>Game Jam</h3>
+          <p>72 hours to design, develop, and ship a playable game. Theme revealed at start.</p>
+          <div class="event-meta"><span>✅ 15 Games Shipped</span><span>🎮 Game Track</span></div>
+        </div>
+        <button class="outline-btn small">VIEW RECAP</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TEAM ── -->
+  <section class="team section" id="team">
+    <div class="section-header">
+      <span class="section-tag">// 04</span>
+      <h2 class="section-title">CORE TEAM</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-avatar"><span>AK</span></div>
+        <div class="team-info">
+          <h4>Aryan Kumar</h4>
+          <span class="team-role">President</span>
+          <p>Full-stack dev & competitive programmer. 3x hackathon winner.</p>
+        </div>
+        <div class="team-domain">Web Dev</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar"><span>PS</span></div>
+        <div class="team-info">
+          <h4>Priya Sharma</h4>
+          <span class="team-role">Vice President</span>
+          <p>UI/UX lead with a passion for accessibility and beautiful design.</p>
+        </div>
+        <div class="team-domain">UI/UX</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar"><span>RV</span></div>
+        <div class="team-info">
+          <h4>Rahul Verma</h4>
+          <span class="team-role">Technical Lead</span>
+          <p>Cloud architect and DevOps engineer. AWS Certified Solutions Architect.</p>
+        </div>
+        <div class="team-domain">Cloud</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar"><span>NS</span></div>
+        <div class="team-info">
+          <h4>Neha Singh</h4>
+          <span class="team-role">Security Head</span>
+          <p>CTF champion and ethical hacker. Bug bounty hunter in free time.</p>
+        </div>
+        <div class="team-domain">Cyber Sec</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── JOIN ── -->
+  <section class="join section" id="join">
+    <div class="section-header">
+      <span class="section-tag">// 05</span>
+      <h2 class="section-title">JOIN ENIGMA</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="join-container">
+      <div class="join-text">
+        <p>Ready to be part of something extraordinary? Fill out the form and we'll reach out within 48 hours.</p>
+        <div class="join-perks">
+          <div class="perk"><span class="perk-icon">⚡</span><span>Instant access to all domain workshops</span></div>
+          <div class="perk"><span class="perk-icon">🤝</span><span>Mentorship from senior members</span></div>
+          <div class="perk"><span class="perk-icon">🏆</span><span>Priority registration for all events</span></div>
+          <div class="perk"><span class="perk-icon">💼</span><span>Real project experience for your resume</span></div>
+        </div>
+      </div>
+      <form class="join-form" id="joinForm">
+        <div class="form-group">
+          <label>NAME_</label>
+          <input type="text" placeholder="Enter your full name" required />
+        </div>
+        <div class="form-group">
+          <label>EMAIL_</label>
+          <input type="email" placeholder="your@email.com" required />
+        </div>
+        <div class="form-group">
+          <label>ROLL_NO_</label>
+          <input type="text" placeholder="Your roll number" required />
+        </div>
+        <div class="form-group">
+          <label>DOMAIN_</label>
+          <select required>
+            <option value="">-- Select your domain --</option>
+            <option>Web Development</option>
+            <option>App Development</option>
+            <option>C++ & DSA</option>
+            <option>Cloud Computing</option>
+            <option>Game Development</option>
+            <option>UI / UX Design</option>
+            <option>Cyber Security</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>WHY_ENIGMA_</label>
+          <textarea placeholder="Tell us why you want to join..." rows="3"></textarea>
+        </div>
+        <button type="submit" class="join-btn full-width">SUBMIT_APPLICATION →</button>
+        <p class="form-note">// No experience required. Just bring your curiosity.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <span class="logo-bracket">[</span>ENIGMA<span class="logo-bracket">]</span>
+        <p>Coding Club</p>
+      </div>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#domains">Domains</a>
+        <a href="#events">Events</a>
+        <a href="#team">Team</a>
+        <a href="#join">Join</a>
+      </div>
+      <div class="footer-socials">
+        <a href="#" class="social-btn">GitHub</a>
+        <a href="#" class="social-btn">Discord</a>
+        <a href="#" class="social-btn">Instagram</a>
+        <a href="#" class="social-btn">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>// ENIGMA CODING CLUB © 2026 — ALL RIGHTS RESERVED</span>
+      <span class="footer-status"><span class="status-dot"></span> SYSTEMS ONLINE</span>
+    </div>
+  </footer>
+
+  <!-- Success Toast -->
+  <div class="toast" id="toast">
+    <span class="toast-icon">✓</span>
+    <span>Application submitted! We'll contact you within 48 hours.</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

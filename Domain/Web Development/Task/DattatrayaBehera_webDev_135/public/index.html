@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enigma | Coding Club</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">ENIGMA<span>_</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#blogs">Blogs</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="fade-in">Crack the Code.</h1>
+            <p>The premier coding community for innovators and dreamers.</p>
+            <a href="#projects" class="btn">View Our Work</a>
+        </div>
+    </section>
+
+    <section id="team" class="section">
+        <h2 class="section-title">Meet the Team</h2>
+        <div class="container grid">
+            <div class="card team-card">
+                <img src="https://via.placeholder.com/150" alt="Member">
+                <h3>Alex Rivera</h3>
+                <p class="role">Lead Developer</p>
+                <p>Specializes in Backend architecture and coffee consumption.</p>
+            </div>
+            <div class="card team-card">
+                <img src="https://via.placeholder.com/150" alt="Member">
+                <h3>Sarah Chen</h3>
+                <p class="role">UI/UX Designer</p>
+                <p>Turning complex algorithms into beautiful user experiences.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section dark-bg">
+        <h2 class="section-title">Our Projects</h2>
+        <div class="container grid">
+            <div class="card project-card">
+                <img src="https://via.placeholder.com/300x180" alt="Project">
+                <div class="card-content">
+                    <h3>CyberVault</h3>
+                    <p>A secure, encrypted file management system built in Rust.</p>
+                    <a href="#" class="link">View Repo →</a>
+                </div>
+            </div>
+            <div class="card project-card">
+                <img src="https://via.placeholder.com/300x180" alt="Project">
+                <div class="card-content">
+                    <h3>NeuralPath</h3>
+                    <p>Visualizing A* search algorithms in real-time environments.</p>
+                    <a href="#" class="link">Live Demo →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="blogs" class="section">
+        <h2 class="section-title">Latest Updates</h2>
+        <div class="container blog-list">
+            <article class="blog-item">
+                <span>March 25, 2024</span>
+                <h3>The Future of Quantum Computing in Web Dev</h3>
+                <p>Exploring how qubits might change the way we handle state management...</p>
+                <a href="#">Read More</a>
+            </article>
+            <hr>
+            <article class="blog-item">
+                <span>March 12, 2024</span>
+                <h3>Why Documentation is Your Best Friend</h3>
+                <p>A guide to writing clean code that humans can actually read...</p>
+                <a href="#">Read More</a>
+            </article>
+        </div>
+    </section>
+
+    <section id="contact" class="section dark-bg">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="container">
+            <form id="contact-form" class="contact-form">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+            <div class="social-links">
+                <a href="#">GitHub</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    background-color: antiquewhite;
+}
+div{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: xx-large;
+    width: 50%;
+    height: 50%;
+}
+#box1{
+    background-color: aquamarine;
+}
+
+#box2{
+    background-color: blue;
+}

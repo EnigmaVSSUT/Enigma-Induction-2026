@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enigma Team</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+    font-family:'Poppins',sans-serif;
+    background: radial-gradient(circle at 30% 30%, #1e293b, #020617);
+    color:white;
+}
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    padding:18px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+}
+
+.logo{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:26px;
+    letter-spacing:2px;
+    font-weight:700;
+}
+
+.nav a{
+    margin-left:25px;
+    text-decoration:none;
+    color:white;
+    position:relative;
+    font-size:15px;
+}
+
+.nav a::after{
+    content:"";
+    position:absolute;
+    width:0%;
+    height:2px;
+    left:0;
+    bottom:-5px;
+    background:#a78bfa;
+    transition:0.3s;
+}
+
+.nav a:hover::after{width:100%}
+
+.hero{
+    height:45vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+}
+
+.hero h1{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:52px;
+    background:linear-gradient(90deg,#a78bfa,#38bdf8);
+    -webkit-background-clip:text;
+    color:transparent;
+    animation:fadeDown 1s ease;
+}
+
+.hero p{
+    margin-top:10px;
+    opacity:0.7;
+}
+
+@keyframes fadeDown{
+    from{transform:translateY(-40px);opacity:0}
+    to{transform:translateY(0);opacity:1}
+}
+
+/* FILTER BUTTONS */
+.filters{
+    text-align:center;
+    margin-top:20px;
+}
+
+.filters button{
+    margin:10px;
+    padding:8px 18px;
+    border:none;
+    border-radius:20px;
+    background:rgba(255,255,255,0.1);
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.filters button.active,
+.filters button:hover{
+    background:linear-gradient(90deg,#a78bfa,#38bdf8);
+}
+
+/* TEAM GRID */
+.team{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+    padding:60px;
+}
+
+.card{
+    background:rgba(255,255,255,0.05);
+    border-radius:20px;
+    text-align:center;
+    padding:25px;
+    transition:0.4s;
+    transform:translateY(50px);
+    opacity:0;
+}
+
+.card.show{
+    transform:translateY(0);
+    opacity:1;
+}
+
+.card:hover{
+    transform:translateY(-10px) scale(1.05);
+    box-shadow:0 15px 40px rgba(0,0,0,0.6);
+}
+
+.card img{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:12px;
+    border:3px solid #38bdf8;
+}
+
+.card h3{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:18px;
+}
+
+.card p{
+    font-size:13px;
+    opacity:0.7;
+}
+
+.role{
+    font-size:12px;
+    margin-top:5px;
+    opacity:0.5;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">ENIGMA</div>
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="blogs.html">Blogs</a>
+        <a href="projects.html">Projects</a>
+    </div>
+</header>
+
+<section class="hero">
+    <h1>Meet Our Team</h1>
+    <p>The people behind Enigma</p>
+</section>
+
+<div class="filters">
+    <button class="active" onclick="filterTeam('all')">All</button>
+    <button onclick="filterTeam('dev')">Developers</button>
+    <button onclick="filterTeam('design')">Designers</button>
+    <button onclick="filterTeam('core')">Core</button>
+</div>
+
+<section class="team">
+
+<div class="card dev">
+    <img src="https://randomuser.me/api/portraits/men/10.jpg">
+    <h3>Rahul</h3>
+    <div class="role">Frontend Dev</div>
+    <p>Builds interactive UI experiences</p>
+</div>
+
+<div class="card design">
+    <img src="https://randomuser.me/api/portraits/women/12.jpg">
+    <h3>Ananya</h3>
+    <div class="role">UI/UX Designer</div>
+    <p>Designs modern user interfaces</p>
+</div>
+
+<div class="card core">
+    <img src="https://randomuser.me/api/portraits/men/32.jpg">
+<h3>Arjun</h3>
+    <div class="role">Core Member</div>
+    <p>Leads technical initiatives</p>
+</div>
+
+<div class="card dev">
+    <img src="https://randomuser.me/api/portraits/women/22.jpg">
+<h3>Sneha</h3>
+    <div class="role">Backend Dev</div>
+    <p>Handles server and database</p>
+</div>
+
+</section>
+
+<script>
+const cards = document.querySelectorAll('.card');
+
+window.addEventListener('scroll', () => {
+    const trigger = window.innerHeight * 0.85;
+    cards.forEach((card,i) => {
+        const top = card.getBoundingClientRect().top;
+        if(top < trigger){
+            setTimeout(()=>card.classList.add('show'), i*120);
+        }
+    });
+});
+
+function filterTeam(type){
+    document.querySelectorAll('.filters button').forEach(btn=>btn.classList.remove('active'));
+    event.target.classList.add('active');
+
+    cards.forEach(card=>{
+        if(type==='all' || card.classList.contains(type)){
+            card.style.display='block';
+        } else {
+            card.style.display='none';
+        }
+    });
+}
+</script>
+
+</body>
+</html>
