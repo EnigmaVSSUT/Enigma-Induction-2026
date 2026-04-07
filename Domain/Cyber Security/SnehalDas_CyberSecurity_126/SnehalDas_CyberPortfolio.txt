@@ -1,0 +1,7 @@
+Kali Linux is successfully downloaded and installed.
+Tool installation and usage of Gobuster using Gedit
+Gobuster tool installation command: sudo apt install gobuster -y
+Gobuster tool usage:
+gobuster dir -u http://scanme.nmap.org -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -t 10
+images          (Status: 301)
+index           (Status: 200)
