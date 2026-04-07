@@ -1,0 +1,41 @@
+Enigma Induction 2026 - CyberSecurity Task Submission :-
+  
+--- CYBERSECURITY PORTFOLIO ---
+
+Name: Asisha Panda
+Branch: Computer Science and Engineering
+Regd.No: 2502040088
+
+-------------------------------
+Phase 1 Completion:
+I have successfully installed and updated Kali Linux on my system.
+  
+-------------------------------
+Phase 2:
+created and maintained a cybersecurity portfolio file using gedit to document all steps,commands,observations.
+
+Challenges Faced:
+- Faced issue installing gedit due to repository error.
+- Solved by correcting sources.list file and updating system.
+- Learned about apt update and package repositories.
+  
+-------------------------------
+Phase 3 Completion:
+I have successfully installed gobuster.
+  
+-------------------------------
+Tool Installation:
+sudo apt install gobuster
+
+-------------------------------
+Tool Usage:
+gobuster dir -u http://scanme.nmap.org -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -t 3
+
+Sample Output:
+index (Status: 200)
+images (Status: 301)
+shared (Status: 301)
+
+-------------------------------
+Conclusion:
+Successfully performed basic web reconnaissance using Gobuster and identified accessible directories on the target server.
