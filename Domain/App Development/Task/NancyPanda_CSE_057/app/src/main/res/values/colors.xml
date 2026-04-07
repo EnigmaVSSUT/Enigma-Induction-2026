@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="gray">#808080</color>
+    <color name="light_gray">#F5F5F5</color>
+
+    <!-- Google Keep Colors -->
+    <color name="note_red">#F28B82</color>
+    <color name="note_orange">#FBBC04</color>
+    <color name="note_yellow">#FFF475</color>
+    <color name="note_green">#CCFF90</color>
+    <color name="note_teal">#A7FFEB</color>
+    <color name="note_blue">#CBF0F8</color>
+    <color name="note_dark_blue">#AECBFA</color>
+    <color name="note_purple">#D7AEFB</color>
+    <color name="note_pink">#FDCFE8</color>
+    <color name="note_brown">#E6C9A8</color>
+    <color name="note_gray">#E8EAED</color>
+</resources>
