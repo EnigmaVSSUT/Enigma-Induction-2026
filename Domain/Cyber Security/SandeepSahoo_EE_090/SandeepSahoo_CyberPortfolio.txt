@@ -1,0 +1,6 @@
+Phase 1 Completion: As I have idea of installation of kali linux in virtual box so i used the normal kali linux iso file rather than the virtual box pre built file to install and to update it fully i use the command-"sudo apt update" and then command-"sudo apt full-upgrade -y" because all the tools are not upgrading with normal command.
+Tool Installation: The command i used to install the GoBuster is- "sudo apt install gobuster" .
+Tool Usage: The gobuster command which i used to run for my scan is-"gobuster dir -u http://testaspnet.vulnweb.com/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt"
+	The Outputs: images               (Status: 301) [Size: 160] [--> http://testaspnet.vulnweb.com/images/]
+	             cgi-bin              (Status: 301) [Size: 161] [--> http://testaspnet.vulnweb.com/cgi-bin/]
+Challenges Faced: The only challenge which i faced during the process is - when i use the command "sudo apt upgrade -y" , 10 tools were not upgrading with this command so i searched the error in google and find out that i have to run the command "sudo apt full-upgrade -y".
