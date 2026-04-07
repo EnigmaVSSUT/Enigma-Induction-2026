@@ -1,0 +1,31 @@
+Name : Tushar sahu
+VSSUT
+Club : Enigma
+Domain : Cybersecurity
+
+Phase 1 Completion : 
+I have successfully installed kali linux in VM ware and updated all packages using terminal commands.
+
+Tool Installation : (Command for installing gobuster)
+-> sudo apt install gobuster
+
+Tool Usage :
+-> gobuster dir -u https://httpbin.org -w /usr/share/wordlists/dirb/common.txt -k
+
+get                  (Status: 200) [Size: 267]
+headers              (Status: 200) [Size: 186]
+html                 (Status: 200) [Size: 3741]
+image                (Status: 200) [Size: 8090]
+ip                   (Status: 200) [Size: 31]
+json                 (Status: 200) [Size: 429]
+legacy               (Status: 200) [Size: 14270]
+patch                (Status: 405) [Size: 178]
+post                 (Status: 405) [Size: 178]
+put                  (Status: 405) [Size: 178]
+recycled             (Status: 502) [Size: 122]
+robots.txt           (Status: 200) [Size: 30]
+xml                  (Status: 200) [Size: 522]
+Progress: 4613 / 4613 (100.00%)
+===============================================================
+Finished
+
