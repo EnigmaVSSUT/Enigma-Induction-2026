@@ -1,0 +1,59 @@
+---- ENIGMA CYBERSECURITY TASK -----
+---CYBERSECURITY PORTFOLIO---
+
+Name : Soumya Patnaik 
+Regd. no: 2502100012 
+Branch : Metallurgical and Materials Engineering 
+
+-------------------------------------------------------------------------------------------
+
+PHASE : 1 KALI LINUX INSTALLATION 
+In this phase I have learnt how to install Kali linux on windows using Oracle Virtualbox and then set the hardware configs accordingly and then i upgraded my system by the command "sudo apt update" 
+
+--------------------------------------------------------------------------------------------
+
+PHASE: 2 INSTALLING GEDIT (GRAPHICAL TEXT EDITOR) IN OUR VIRTUAL SYSTEM 
+In this phase i have learnt how to install "gobuster" on my virtual Kali linux system. 
+
+--- Challenges faced  ---
+i) Firstly when i entered the command "apt install gobuster" but since i was not giving the command in root terminal, it didn't worked so i tried it in root terminal and it finally ran
+ii) Secondly, when i ran the command in the root terminal it had error so i went back to the normal terminal and ran the command "sudo apt install" then it worked. 
+
+--------------------------------------------------------------------------------------------
+
+PHASE : 3 FIRST RECON MISSION USING GOBUSTER 
+
+In this phase I have installed a real security tool (Gobuster) and used it to gather real info
+
+OBJECTIVE
+
+Install GoBuster, understanding its basic usage, and running a simple scan.
+
+
+ABOUT GOBUSTER
+
+GoBuster is a command-line tool used for brute-forcing directories and files on web servers. It takes a list of common directory names (like /admin, /login, /images) and checks whether those paths exist on a website. This helps in discovering hidden or forgotten parts of a web application.
+
+Tool installation : 
+sudo apt install gobuster
+
+Tool Usage: 
+gobuster dir -u http://testphp.vulnweb.com  -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+wget http://testphp.vulnweb.com
+
+Sample Output : 
+--2026-03-23 09:59:50--  http://testphp.vulweb.com/
+Resolving testphp.vulweb.com (testphp.vulweb.com)... 199.191.50.185
+Connecting to testphp.vulweb.com (testphp.vulweb.com)|199.191.50.185|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘index.html’
+
+index.html                                          [ <=>                                                                                                   ]     122  --.-KB/s    in 0s      
+
+2026-03-23 09:59:51 (3.79 MB/s) - ‘index.html’ saved [122]
+
+
+
+
+
